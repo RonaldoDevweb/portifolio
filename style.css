@@ -1,0 +1,486 @@
+/* Estilo geral do site */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #101010; /* Fundo escuro e sóbrio */
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Texto claro para contraste */
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho e Títulos */
+.header-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #cccccc; /* Cinza claro para contraste */
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 28px;
+    font-weight: normal;
+    color: #cccccc; /* Cinza claro para contraste */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.subtitle::after {
+    content: "";
+    width: 100px;
+    height: 2px;
+    background: #00ccff; /* Azul suave para contraste */
+}
+
+/* Menu de Navegação */
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.info-menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+    font-size: 16px;
+}
+
+.menu ul li a:hover {
+    color: #00ccff; /* Azul suave ao passar o mouse */
+}
+
+.mobile-menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Seção de Apresentação */
+#apresentation {
+    margin: 100px 0;
+}
+
+.info-apresentation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Texto Futurista */
+.info-apresentation span {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif; /* Fonte futurista */
+    background: linear-gradient(90deg, #00a1d6, #1308e6); /* Gradiente mais frio e sofisticado */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 5s steps(14) 1;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Foto de Perfil com Efeito Holográfico */
+.profile-photo {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(2, 248, 248, 0.5);
+    animation: hologramShadow 6s infinite alternate;
+}
+
+.profile-photo::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(5, 5, 243, 0.2), transparent 70%);
+    animation: orbit 6s linear infinite;
+}
+
+@keyframes hologramShadow {
+    0% { box-shadow: 0 0 20px rgba(0, 161, 214, 0.5), 0 0 40px rgba(0, 161, 214, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(0, 161, 214, 0.8), 0 0 60px rgba(0, 161, 214, 0.5); }
+    100% { box-shadow: 0 0 20px rgba(0, 161, 214, 0.5), 0 0 40px rgba(0, 161, 214, 0.3); }
+}
+
+@keyframes orbit {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+/* Texto "Desenvolvedor Web" */
+.developer-text {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: typing 4s steps(14) 1;
+}
+
+/* Efeito de Linhas de Código Flutuantes */
+.code-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.code-lines::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(0, 161, 214, 0.1), rgba(255, 255, 255, 0.05));
+    animation: rotateLines 10s linear infinite;
+}
+
+@keyframes rotateLines {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Seção "Sobre Mim" */
+.info-aboutme {
+    margin-top: 60px;
+}
+
+.info-aboutme p {
+    font-size: 18px;
+    color: #fefefe; /* Cinza claro para contraste */
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.8;
+}
+
+/* Tecnologias */
+#tecnologias {
+    margin: 100px 0;
+}
+
+.container-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 60px 0;
+    gap: 20px;
+}
+
+.container-icons img {
+    filter: grayscale(0);
+    transition: 0.5s;
+    max-width: 80px; /* Tamanho adequado para mobile */
+    height: auto;
+}
+
+.container-icons img:hover {
+    cursor: pointer;
+    filter: grayscale(100%);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .container-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+/* Seção de Projetos */
+.info-projects {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap; /* Permite que as caixas quebrem para a próxima linha */
+    justify-content: center; /* Centraliza as caixas */
+}
+
+.card-project {
+    flex: 1; /* Faz com que todas as caixas ocupem o mesmo espaço */
+    min-width: 300px; /* Largura mínima para evitar que fiquem muito pequenas */
+    max-width: 400px; /* Largura máxima para evitar que fiquem muito grandes */
+    height: auto; /* Altura automática para se ajustar ao conteúdo */
+    background-color: #1a1a1a; /* Fundo escuro */
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 161, 214, 0.5);
+    transition: 0.5s;
+    padding: 20px; /* Adiciona um padding interno */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho da caixa */
+}
+
+.info-card-project {
+    flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço necessário */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Alinha o conteúdo no topo e os botões na parte inferior */
+}
+
+.info-card-project h3 {
+    font-size: 24px;
+    color: #00ccff; /* Azul suave para contraste */
+    font-weight: normal;
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
+}
+
+.info-card-project p {
+    font-size: 16px;
+    color: #a7a7a7; /* Cinza claro para contraste */
+    margin-bottom: 20px;
+    flex-grow: 1; /* Faz o parágrafo crescer para ocupar o espaço disponível */
+}
+
+.legend-project p {
+    font-size: 14px;
+    color: #a7a7a7; /* Cinza claro para contraste */
+}
+
+.legend-project span {
+    font-size: 14px;
+    color: #00ccff; /* Azul suave para contraste */
+}
+
+.footer-project {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Mantém os botões na parte inferior */
+    padding-top: 20px; /* Espaçamento acima dos botões */
+}
+
+.url-project, .code-project {
+    font-size: 14px;
+    color: #00ccff; /* Azul suave para contraste */
+    text-decoration: none;
+    transition: 0.5s;
+    padding: 5px 10px; /* Espaçamento interno menor */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaço entre o ícone e o texto */
+}
+
+.url-project:hover, .code-project:hover {
+    color: #00a1d6; /* Azul mais claro ao passar o mouse */
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Estilos para a seção de contatos */
+#contact {
+    position: relative;
+    padding: 60px 0; /* Espaçamento vertical reduzido */
+    text-align: center;
+    color: #fff; /* Cor do texto */
+}
+
+
+/* Container para centralizar o conteúdo */
+#contact .container {
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique acima do fundo */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Títulos */
+#contact .header-section h1 {
+    font-size: 36px;
+    color: #00ccff; /* Azul suave */
+    margin-bottom: 10px;
+}
+
+#contact .header-section h2 {
+    font-size: 24px;
+    color: #cccccc; /* Cinza claro */
+    margin-bottom: 40px;
+}
+
+/* Ícones de contato */
+.info-contact {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-item i {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #00ccff; /* Azul suave */
+}
+
+.contact-item span {
+    font-size: 16px;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    color: #00ccff; /* Azul suave ao passar o mouse */
+}
+
+@media screen and (max-width: 768px) {
+    .info-projects {
+        flex-direction: column; /* Empilha os projetos em telas pequenas */
+        align-items: center; /* Centraliza os projetos */
+    }
+
+    .card-project {
+        width: 90%; /* Garante que os cartões ocupem quase toda a tela */
+        max-width: 350px; /* Evita que fiquem grandes demais */
+    }
+}
+
+
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .info-contact {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #contact .header-section h1 {
+        font-size: 28px;
+    }
+
+    #contact .header-section h2 {
+        font-size: 20px;
+    }
+}
+/* Responsividade */
+@media screen and (max-width: 1200px) {
+    .menu {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+
+    .mobile-menu-open {
+        display: block;
+        position: absolute;
+        top: 90px;
+        right: 20px;
+        background-color: #00ccff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(45, 215, 245, 0.5);
+        z-index: 1;
+    }
+
+    .mobile-menu-open ul {
+        flex-direction: column;
+
+    }
+
+    .mobile-menu-open ul li {
+        margin-bottom: 10px;
+    }
+
+    .mobile-menu-open a {
+        color: #fff;
+    }
+    
+
+    .info-apresentation {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 250px;
+        height: 250px;
+    }
+
+    .title {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+
+    .info-aboutme p {
+        font-size: 16px;
+    }
+}
